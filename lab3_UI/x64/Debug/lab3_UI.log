@@ -1,0 +1,10 @@
+﻿  Crypto.cpp
+C:\Users\Дмитрий\source\repos\lab3_UI\Crypto.cpp(39,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Дмитрий\source\repos\lab3_UI\Crypto.cpp(261,22): warning C4101: 'result': unreferenced local variable
+  MainForm.cpp
+C:\Users\Дмитрий\source\repos\lab3_UI\MainForm.h(332,1): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+C:\Users\Дмитрий\source\repos\lab3_UI\MainForm.h(343,1): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+C:\Users\Дмитрий\source\repos\lab3_UI\MainForm.cpp(6,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  Generating Code...
+  Crypto.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  lab3_UI.vcxproj -> C:\Users\Дмитрий\source\repos\lab3_UI\x64\Debug\lab3_UI.exe

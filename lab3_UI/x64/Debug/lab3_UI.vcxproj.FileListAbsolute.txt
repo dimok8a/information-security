@@ -1,0 +1,4 @@
+C:\Users\Дмитрий\source\repos\lab3_UI\x64\Debug\lab3_UI.vcxproj.AssemblyReference.cache
+C:\Users\Дмитрий\source\repos\lab3_UI\x64\Debug\lab3UI.MainForm.resources
+C:\Users\Дмитрий\source\repos\lab3_UI\x64\Debug\lab3_UI.vcxproj.GenerateResource.cache
+C:\Users\Дмитрий\source\repos\lab3_UI\x64\Debug\lab3_UI.exe
