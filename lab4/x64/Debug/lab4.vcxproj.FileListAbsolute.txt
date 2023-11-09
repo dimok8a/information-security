@@ -1,0 +1,4 @@
+D:\Яичная шкарлупка\Python\information_security\lab4\x64\Debug\lab4.vcxproj.AssemblyReference.cache
+D:\Яичная шкарлупка\Python\information_security\lab4\x64\Debug\lab4.lab4_main_form.resources
+D:\Яичная шкарлупка\Python\information_security\lab4\x64\Debug\lab4.vcxproj.GenerateResource.cache
+D:\Яичная шкарлупка\Python\information_security\lab4\x64\Debug\lab4.exe

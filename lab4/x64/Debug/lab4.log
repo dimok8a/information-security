@@ -1,0 +1,4 @@
+﻿  Lab4_main_form.cpp
+D:\Яичная шкарлупка\Python\information_security\lab4\Lab4_main_form.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  BigInt.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  lab4.vcxproj -> D:\Яичная шкарлупка\Python\information_security\lab4\x64\Debug\lab4.exe
