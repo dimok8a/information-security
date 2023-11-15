@@ -1,0 +1,138 @@
+import itertools
+
+word1 = "Венгрия"
+word2 = "2"
+decrypt_word1 = "AJAHDPEKEODLFOHMEBHPBCIJHHMMMCNO"
+decrypt_word2 = "MBJCBEBFOFMPKPJMMBLJBJBOBGMAMMHM"
+decrypt_text = "HFDDECIKMMMALBCKMEDJJKOPHJAHLCIEHFNEIMGOCPKFNMDFAJLNIEAOFHOHFHONOIJDCPAJEDMFHMAAMCONCEOAOPMCJNGONAAHAIFDGNALHFCHONOEDPIBHEDBBHNKKICNFOGBIJHPOKNFAALKIBIIOEOFFNBOMELNNNFFAEOHPAHHOIHBBHJJEBEBHMKAFGFHHICLAHCMFAOMMEFBDIGMAPDEENHFMEJBCBCOILMPDOKKCKBNAMIAOIAGCNBOMENGHLHNIFCKLKIHOIJJEDCAAEIPNNFPHFDGILAGJCKMDEIANAHACFHAAOMIEFICAJFAIMABGCONHFINHFEPIHAFEEKMGMKAKIDENMHJADBBEFEDMCDCGKINJNFPHAEKAADKCJEGEEFJPMLIIHIDGEAPIGFBIONANOOHIKAHICKOCKCACHCLIHGIJIKFBABFAJHEAENOPHNBJDIFCCPOHFAEBBCGIECANAGJJLAPAFEFENCFFGAEIFCIAAKDDANKAAHBKJMNKCKFGKAFKIIKAEPKMNANIFDDFGADEPJCINMBNOFAMCJBJCEPHPABHCJMAADCGJEJEKACEMDMCDGJHIAKGIMCGACJKIKPFFCJAAHDJABMMCFKOHGFEMNEEMLFAADKFEKCIHHJPOMCMCPLODEKIANBBKFIKKDFOFIBAOOJIAGKKIHHFAPPCHHNDMLDOIDMAPPJIKAPMOLDMECMPLFLOJDFOOKHMEKGJFCEIEAHNOCKAACBIBEHIPODNONMCHJOAFABKMNEPCMANAKMKKHFAGCLMFIDAAKPAAJHAPNOFNJECHLLEIFIAIMDEADHAAGDHABEHDHHCDHEHFGOEMIBHGMCICCKAJBEIIEGNNOMAOEMMCAOIFAEBBKNIEGANAHJGNHOOFFPONGCKIHCCPPEIMMICOHDAANLKCGCNLJKKFJNNAOOIFJEAHOBBACADPJMEAIDKPMMPKEKNOMFHDAEEJCHPMKAAJALMBHDOCFNIOCHMCNCGAAIHMFOCDJAFGOIECACHAMMNCDNKCAPEFIFDBMBPDLOOIIHHPOLCADFOMMNHHABEGIMANMKMAPKPCPCIDAMHCOHDCPNAAOFHIHNBCHOEEEDHFIDPLIPHHDBMCKONAJNPIOGEFDBNMGNFNBEJACMIOEAEOLMNADHOCOJAHNEHAFNCHKGAPHPADNCGAAHDPIMIDIHFHKNGHCOCDIBAGAHJGJLEEBAPOKNABEGAIJOJJCGONHFIAAMAGODMJLAFACPICIHFDOKFHLOAACDOAJCEIPDJIHEBKAJAEEAAJJAOJBGFMKMCBGDAPMDAAPFKICNHBAFGHCDBNJAOIBMEJNFOMIIPOHOAAABHDIBABDPNAGOKIKFHCJJIFDKCOAAKIAAFCGLEDHPPMDFAGKCEAAGJDGKJENAFGGPMEAOBFFHBFIAAAKMGPGOCKFHFMJNNOIDIJJKAOKFFNAAAAADOMJLFFPBIHOEEJDGPIGBEHHIKGDHFMCECGGMABMBAAPFMCGJAIADGKNCANMADPIFEAIIHPMBLDDKHFDIGAIDGBNPOFEKNAPEIEHDAKOELAFFDPOHNHIJKAFCEKLKDHCCABIJOMAIDEOOFAHNHEAOHEDMDCINKIEBHMKDALDKINJCFGDMPPIEAKDLEALKNABAPACBIMDGCOPKFNJLAMCAIIABCOLMAJJJGCIDOLFBANDKNAMMCFJFHOMBICKAHHGLPOOCGCDNFFEOOIPHEMJMEEMDOMEAKIBLNJHDACOIHAMHKINBCKPCANMFIAKBKICAEBFDOMIKJNJHBMCBGCACJMFFBEEAOIJDJDPDACAILNDDNADKNMHEDAOPLDBCEJABAAHPIEACIKJDDPDMIPEDHDKAHNDMMCABCBOOHAMDBCJOEBLIJJAEOFEPGNHNMCHECCDOAHMCKALBLDLPKMICOCJPBNFKOIKBJNOKIGAJIONEMCIPOAFMIHNKCFBHEJNAAMBNAAAADNPEOIFMKBHFLIKMOAMCFGBMIEPLABOBDNJDNOAPAACOEHNLBIJMAACAEKJJBPOMNEAEDPICIKCFIMKMPOEMONJBENKADHMEKLIONOIAAICOHENFDCEMAACIHJJHBMNLHEEEDPIBIAHOEBOOAMGCNOGHAMCKJONAFALMKIJNHMAIBAHDOEPANADDCAHFECPAEMNCNGDFANINIBAIKOMOAAKPHKIMEDDBLOGKDDLMICIHJPOPLAOKOILCABAIKCFFLCAAOIBDKKJHAICMGAGANAPIAAHBACFEMADCKILFHMHGDJDMMDDCHHLPIEAFONKDAODAMEFPHDFMNNCDNOJHDPHHICAMDKOBFDGNAAJGOANBCKNPFMLFHHCNJLOMHCADLCAOAAAFDKENMMDAEFFMHHDBHCOCHAHILCJOKIAPFFHCIMHAFOJCAAIBFAIHOIHGDNAOMCKEOKEBIGNLIKGICHCHIJHBACKKNAOHHFJNJBIAGIAMOFAONALGJIOIIFEDMOGNAJCIIMOEABODOAEOKIHPNGGPCFBBIKEFKIBHCCPBAPMGJNJDKIAJDDAONEDBFFHADHBAJAIPHOAMECNKAAHCOBEJIENFMKJMOICBCIPDIDKFDKCDFGGNFJCOEHHFHMKMHFEFICAOIBKGAKCAAJBPIDJCEHKICMEAFGJNEKAHEJMBOIAAOIBCOHJDKENHFCKAAABGICJMIDKEKOOEKIAKKCFMCKKJCMHHONIMAHNCIONMNKMBMCPONCIKPHFAPDCOAJENAAAKANNPMAHFFGOMEBIHCKMONKKOAJDDMLNAPCFPADIFFGBNEDABEKMBCMJAOIBGGOHBHAFCACFCOIOEIGHNIBOIMKLCMCLKIIAEJCKPAEJAOILFAHJHGBAGJFCACHIPIOIJDLKCCDBKHFEJAOIENCAPNOBKAJKCAMALICNCHOHADPPFEBENCDMJCMNMFMKMKAJDJCCCEAAAOOMCJKHMANAJOAGHKIKAFGGBODHOFNEFOEODAEAFGFABENBAFAIMOFEBHFOEKCHMFGADABNCPPNJLDHFAAOHOAEKGMNOCFLMONMMIKNIAPKIJNKBMCKEGEAOEIFHMIJAFGMNEFAKHEMBDCCNKCDHEKIDDPMPCDKOKIIJEGOLCBINBMBNHHKBEFIHAMMNIAJKPCACIMAKHNOLKCCNMCCDOHAEIJOHMODAMCFOGPEKEBFMPDLMAJLIJNEHFCAGFHKMOIFMALALIFFEHKCAAJDDBJEEHBECCDAMMCAFNPALPOFNNDPNKKCICPIBACMMCACKAJCDIGAAGBKFBFBNNAFFAPOHFEAMPHENAACACAAEJBMDNABNMEDPGHFNIAFAOKMHKIMHDJOKCNLCKMMNCHKAHNEPDLDBKDFMMCBBOFJNAKNNNNLAAAHKCBHNIDCMCKDDAJCOGCINHAFFHCKKAAHDLAGDEBAPDMLNMEBNNFKGIPOAHKCKHHBPIMADAMKFINCAJKBFOLAENEOFDOAANODGIECLHJKCDCNMMCKNINANHNKFIDNANAPGPMFEHPDPMCDHHHPNPAAKAADAJNLAFMAEAKJNAKAFMNLAKINMGCHFHAFADHDCAJIJINFLIJOOLOBHAACEJEAGOPABJNJNDPBGEJAEAEMAMNOAJPLHPEJLGPJCOFJANAKJHJOOAPDBPAPNAJHFICACHPODJHLNCDBAFJAAPEOCMJAAAAMEDMGOKGDHBBDAOIKHAPAKGAAKENJAMEPINNHGHCOPCHNCCHKIEIHJIMMHEKMHDPONIOEGNBOAIOEMAAJAAJALPFFFGDMNMEDBHMFDAOCIBNHHAJENIFEFOHOCGEGMNOMEIMAFEPKPHMHAAJNMJLEIHBAAOCCMKIMCAHDHILAFAKFDCHFMEFEPHFMKBHCMDHJAAIIAPDNCPDCKAAMHFDFBACHPEAJHAJMFELECIFMINKAIOOLDCBAJMGMAMGBAEOEKJEEAHMAKEHMMAADIHFEDIMHLJKGMHFLAENIDHBMJJCGKAJGHINEJNNOKBOAMBDJJCEALENMMBMDAKIFDDCOCCFLCCMJNEOLAIDILKMODIJLOHFDECEIIJNMHMADFIEFJALIEOKADNNCKMEOMHGHIILCBKKBHOIEBIPCJADOIPNOPNAJCHAOOABCCJAFNAJBGAAINNINGCOFOAJPFICNCPKKHADNFFAJEHBIPAMDFOABOOIPCPFJBECDHNMJAKILGKKAPIOKGIKNANAHDJFGKCAACNMGFNOHNOKFHIMOADKGHNAECANJEADAPPAFAMEEBHBCKFHDOFHKMBNOMJAPFAKANFAPJAAADOEHAICNCDKIDDPEOEFMBHGMGLCAFKIALFPCDAAHNHALMMCOIOHGBEMNIJMGFDDKDEFDFIJMFDKKLNAMFJAHJHGACGCNDKIAADEODCKDJLMDNCCOGHPANIPCMLKJAFGDPAAJEIDNBCKHAAAJGCIIIACMDHABOCHGMAEDOMLNEIFJDAABPHEIEPECHJDBKNAHDPMOLEHJMGMLEJPEBAEODELAAIDFODPOMNKIIHDFNJCFKAAAJFNFEAFHACABHKIHPNDKCMKOFFFCCDJMEOEAJEAOFFMNAAJNBIEMAHFOFHDDFOIOEAFABINANOOIADPANDGIBHNDNHNNKOIAKIGHKAIOFENNCFAMAACIGAHAPCANOEOFPIIAFCGOPICBNMCBEOCGICPNEOMMFKIECAADJIIAMEKADKIFJOPPLKKNEEKDDOIDDAGAGACAHHNEALIMLBMKCIEEKIKHKMEEPJAPCFFAMCHDDAAPPICIJIEOMJOAOAAHFFJIAHPHIEDKOAJLBMMEIILFHDKHIMEKOHGIEAJCCKALCAJHEIMAPHJOJKDDNAAJCHIMJIBHMHOHGDPIKEKCKIMMCCKFMNANMAHHHALFEAAHCKIHEHKHGDADFLDMCHHIKHFANAMCEDNMAOIEDFBGCICHMNKJFNODFAHIIJPNMOAKOAAJPHFFMAENIOAEHNAPPHBNOOBHGIOPOFGNJCEOEEJMGLMGEIEABAGIAOAAFJNGKMEEFHPHJIFCOBKLHOIFAIFCLAHONJNAPFMCBPCKAABDLAAFKHFDPMMAPAJFPONHAONKHEKECFGMNEHGMAABKIBANJDOBJAJNHFHGIGAPAHKDCFBAFMFIAAJMEEAHOIBAAJBJDKEEENDMMOFMEBHKMMIIHBGBPCCOOIFICDECAFMDIAPOLDEOKBIBPCOAHDJKCHGNCOEINPMCAOEMEBADAJALOIAAJNKNMEAAHOHBIHCBDKOHOILKBLCMAOEGNNIPCHANIEHIAOOLFAPHDPFCAFELFJNNHHHMAACHIKOHABKPIAANKICPKFFHCNKDOMIHONBIEONBIEMMNKEBJPAIAHIMJIAFHAJODPBENAIJLDFMHABKEJBHAKIHOOAGKELOALDMHBAOAPCPPNBAMCINOCNBAPNFONCBAAAIIGBMAJKPKNIECHCPAOEDHHNMKHKMEBHDAJICCDANCPEOJLLOEPANMCMJFHDAMCHMPGIJKCDADCLKNAOHODFJIHNJCKPHGMNAAPIFIMAAHOHOFAMNODENHIOIJCGMFGJPAENLPFNEJDMFAAOCHJMMGMNBOFDFDPFKILHAENOHMMDCNOANIFCAJDKAJAOMKIGHHHAHEEHCJILANALNCAHHEDPDAMBCAAFHINIFIJKKOOBOFAAJADAKOFNDLNANAANBHBIIPFCAADJONAMIPKOJECJGFMIEMENIAIEDEJAEODMMOINEBMPNFMEPJHPDMEILANIKJPAFFANOAADAOAAGJFNAJAONMECFCLJGILKDDKAAIEMGAIMPJLACCAHFCKLMIPCJIFKCNOFMHFIKIEAFNPKBCOIAOOJENGHNIBBFHKPCAJFJIBJKEBKDDMAAKKKKIPAMELKNCIOAKKOAMENOHAFONCDFCHNBICHPAPKEOAIHHFOMAKIJGCAMMFCOPCFNIDAFJFOCBALNMCFHOGGMCFNKIMEFAAMAIPEOIMCBHKCIDHINAFHFEJNNHMACOIHFGCIEJLNMCAEOMBBFBHBABLMHIMGM"
+
+# Возвращает длину самого длинного слова в тексте
+def find_max_word_length(sentence):
+    words = sentence.split()  # Разбиваем строку на слова по пробелам
+    max_length = 0
+    for word in words:
+        current_length = len(word)
+        if current_length > max_length:
+            max_length = current_length
+    return max_length
+
+
+# Функция возвращает истину, если все символы "#" стоят в конце и между ними нет других
+def check_hash_end(input_str):
+    # Используем метод rstrip() для удаления символов "#" справа
+    stripped_str = input_str.rstrip("#")
+    if stripped_str.find("#") >= 0:
+        return False
+    return True
+
+# Разделяет строку на массив по chunk_size символов
+def split_string(input_string, chunk_size):
+    return [input_string[i:i + chunk_size] for i in range(0, len(input_string), chunk_size)]
+
+
+# Функция генерирует таблицу замены на основе текущего сета (последовательности индексов), слова и его шифра
+def make_dict_by_word_and_current_set(current_set, word: str, decrypt_word: str):
+    final_dict = {}
+    word = list(word)
+    decrypt_word = list(decrypt_word)
+    # Флаг говорит о том, нет ли пары, которая указывает сразу на 2 символа
+    red_flag = False
+    while len(word) < 8:
+        word += "#"
+    for j in range(0, 8, 2):
+        current_pair = decrypt_word[int(current_set[j])] + decrypt_word[int(current_set[j + 1])]
+        current_pair_plus_16 = decrypt_word[int(current_set[j]) + 16] + decrypt_word[
+            int(current_set[j + 1]) + 16]
+        # Проверяем, нет ли одинаковых пар символов
+        if (current_pair in final_dict and final_dict[current_pair] != word[j // 2]) or \
+                (current_pair_plus_16 in final_dict and final_dict[current_pair_plus_16] != word[(j + 8) // 2]):
+            red_flag = True
+        final_dict[current_pair] = word[j // 2]
+        final_dict[current_pair_plus_16] = word[(j + 8) // 2]
+    return [final_dict, red_flag]
+
+
+# Функция возвращает массив из всех вариантов дешифрования текста
+def generate_all_decrypt_variants(indexes, code_array):
+    result = []
+    # Генерируем все варианты перестановок переданных индексов (8!)
+    perm_set = itertools.permutations(indexes)
+    # Текущая комбинация
+    for current_set in perm_set:
+        new_element = {}
+        new_version_of_text = ""
+        [word_dict, red_flag] = make_dict_by_word_and_current_set(current_set, word1, decrypt_word1)
+        [word_dict2, red_flag2] = make_dict_by_word_and_current_set(current_set, word2, decrypt_word2)
+        cross_red_flag = False
+        # Проверяем, не указывает ли 1 пара на 2 разных символа между текстами 1 и 2
+        for item in word_dict:
+            if item in word_dict2 and word_dict[item] != word_dict2[item]:
+                cross_red_flag = True
+        # Проверяем не указывает ли 1 пара на 2 разные буквы
+        if not red_flag and not red_flag2 and not cross_red_flag:
+            for i in range(len(code_array)):
+                # Новые 8 символов
+                new_line = ["*" for x in range(8)]
+                for j in range(0, 8, 2):
+                    # Текущая пара символов
+                    current_pair = code_array[i][int(current_set[j])] + code_array[i][int(current_set[j + 1])]
+                    # Пара символов под ними
+                    current_pair_plus_16 = code_array[i][int(current_set[j]) + 16] + code_array[i][
+                        int(current_set[j + 1]) + 16]
+                    # Записываем частоты символов
+                    if current_pair in new_element:
+                        new_element[current_pair] += 1
+                    else:
+                        new_element[current_pair] = 1
+                    if current_pair_plus_16 in new_element:
+                        new_element[current_pair_plus_16] += 1
+                    else:
+                        new_element[current_pair_plus_16] = 1
+
+                    # Получаем символы из Венгрии
+                    if current_pair in word_dict:
+                        new_line[j // 2] = word_dict[current_pair]
+                    if current_pair_plus_16 in word_dict:
+                        new_line[(j + 8) // 2] = word_dict[current_pair_plus_16]
+                #  Записываем новые 8 символов в итоговую версию
+                new_version_of_text += "".join(new_line)
+
+            #     Сортируем по убыванию (самые частоповторяющиеся сверху)
+            new_element = dict(sorted(new_element.items(), key=lambda item: item[1], reverse=True))
+
+            new_element_keys = list(new_element)
+            new_version_of_text_array = list(new_version_of_text)
+            for i in range(len(code_array)):
+                for j in range(0, 8, 2):
+                    current_pair = code_array[i][int(current_set[j])] + code_array[i][int(current_set[j+1])]
+                    current_pair_plus_16 = code_array[i][int(current_set[j])+16] + code_array[i][int(current_set[j+1])+16]
+                    # Меняем самые частые на пробел
+                    if current_pair == new_element_keys[0]:
+                        new_version_of_text_array[i*8 + j//2] = " "
+                    if current_pair_plus_16 == new_element_keys[0]:
+                        new_version_of_text_array[i*8 + (j+8)//2] = " "
+            new_element = {}
+            new_version_of_text = "".join(new_version_of_text_array)
+            new_element["new_version_of_text"] = new_version_of_text
+            word_dict.update({new_element_keys[0]: " "})
+            new_element["vengrya_dict"] = word_dict
+            max_word_length = find_max_word_length(new_version_of_text)
+            # Проверка на корректность варианта
+            if max_word_length <= 33 and \
+                    new_version_of_text.find("Венгрия") >= 0 and \
+                    check_hash_end(new_version_of_text):
+                result.append(new_element)
+    return result
+
+
+# Индексы значимых символов
+correct_indexes = "0 1 4 6 8 10 13 15"  # +16
+number_arr = correct_indexes.split(" ")
+result_array = split_string(decrypt_text, 32)
+result = generate_all_decrypt_variants(number_arr, result_array)
+print("Всего вариантов: " + str(len(result)))
+for details in result:
+    for key, value in details.items():
+        print('%s:%s\n' % (key, value))
+    print("========================\n")
+
